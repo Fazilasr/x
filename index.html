@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature's Tracks</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cursor elements -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  
+  <header class="site-header">
+    <nav class="site-nav">
+      <div class="nav-left">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="toggle-circle"></span>
+        </button>
+      </div>
+      <div class="nav-center">
+        <p class="subtitle">Composed by the creator{ﷲ}</p>
+    </div>    
+      <div class="nav-right">
+        <a href="#" class="about-link" onclick="openAboutModal()">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="gallery-container">
+    <div class="gallery-grid" id="gallery"></div>
+  </main>
+
+  <div class="modal-overlay" id="overlay">
+    <div class="modal-loader">
+      <div class="loader-circle"></div>
+    </div>
+  </div>
+
+  <div class="info-panel" id="infoPanel">
+    <button class="close-btn" aria-label="Close">
+      <span class="close-btn-line"></span>
+      <span class="close-btn-line"></span>
+    </button>
+    <div class="modal-content">
+      <div class="modal-image-container">
+        <img id="creatureImg" class="modal-image" src="" alt="">
+        <div class="image-overlay"></div>
+      </div>
+      <div class="modal-info">
+        <h2 id="creatureName" class="creature-title"></h2>
+        <p id="creatureDesc" class="creature-description"></p>
+        <div class="audio-controls">
+          <button id="playBtn" class="play-btn">
+            <span class="play-icon"></span>
+            <span class="play-text">Play Sound</span>
+          </button>
+          <div class="volume-control">
+            <div class="volume-slider">
+              <div class="volume-progress"></div>
+            </div>
+            <span class="volume-indicator"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-modal" id="aboutModal" style="display: none;">
+    <div class="about-content">
+      <div class="about-info">
+        <img src="developer-photo.jpeg" alt="Developer Photo" class="developer-photo">
+        <h2 class="about-title">Fazil~</h2>
+        <p class="about-text typing-effect">THis Site is indie Project Developed by Fazil~دهر </p>
+        <p class="about-description">Indie Dev ~Fazil~</p>
+      </div>
+      <button class="close-btn" onclick="closeAboutModal()">
+        <span class="close-btn-line"></span>
+        <span class="close-btn-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openAboutModal() {
+      document.getElementById("aboutModal").style.display = "flex";
+    }
+
+    function closeAboutModal() {
+      document.getElementById("aboutModal").style.display = "none";
+    }
+  </script>
+  <footer class="unique-copyright">
+    <p>© 2024 Fazil ~ Nature's Tracks</p>
+</footer>
+
+</body>
+</html>
